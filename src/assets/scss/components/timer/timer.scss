@@ -1,0 +1,9 @@
+.timer {
+  text-align: center;
+  .eventTime {
+    div.wrap span:nth-child(odd) {
+      border: 2px solid white;
+      border-radius: 50%;
+    }
+  }
+}

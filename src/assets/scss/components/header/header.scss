@@ -1,0 +1,32 @@
+.header {
+  nav {
+    background-color: $main-bgc;
+    padding: 80px 0 30px;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      li {
+        a {
+          font-size: 20px;
+          color: black;
+          text-decoration: none;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  h1 {
+      margin: 25px 0;
+      text-align: center;
+      div {
+        @extend h1;
+      }
+  }
+  .dots {
+    background: radial-gradient(ellipse at center, rgba(159, 212, 255, 0.308) 0%, rgba(198, 206, 250, 0.466) 30%, transparent 30%);
+    background-size: 20px 20px;
+    background-repeat: repeat-x;
+    background-position: 5px center;
+    height: 50px;
+}
+}
