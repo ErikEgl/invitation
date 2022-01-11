@@ -71,7 +71,7 @@ function serve() {
     server: './dist',
   });
 
-  watch('src/**/**.html', series(html)).on('change', sync.reload);
+  watch('src/**/**/**.html', series(html)).on('change', sync.reload);
   watch('src/assets/scss/**/**.scss', series(scss)).on('change', sync.reload);
   watch('src/assets/js/**/*.js', series(js)).on('change', sync.reload);
   watch('src/assets/img/**.**', series(img)).on('change', sync.reload);
