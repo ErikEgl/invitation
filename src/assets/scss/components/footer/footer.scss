@@ -1,24 +1,22 @@
 .footer {
-    padding: 100px 0;
+  padding: 100px 0;
+  text-align: center;
+  li {
+  }
+  form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 25px 0;
+  }
+  input {
+    padding: 15px;
     text-align: center;
-    li {
-
+    background-color: white;
+    border-color: $main-bgc;
+    @include media($md) {
+      width: 60%;
+      margin: 0 auto;
     }
-    form {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        margin: 25px 0;
-    }
-    input {
-        padding: 15px;
-        text-align: center;
-        background-color: white;
-        border-color: $main-bgc;
-        @include media($md) {
-            width: 60%;
-            margin: 0 auto;
-        };
-    }
-
+  }
 }

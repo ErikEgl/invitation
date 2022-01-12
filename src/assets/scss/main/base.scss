@@ -1,5 +1,5 @@
 @include reset();
-@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
 html {
   scroll-behavior: smooth;
   font-size: 16px;
@@ -9,7 +9,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  font-family: 'Marck Script', cursive;
+  font-family: "Marck Script", cursive;
 
   &::before {
     content: "";
@@ -22,10 +22,9 @@ body {
     width: 300px;
     position: fixed;
     z-index: -1;
-
   }
   &::after {
-    content: '';
+    content: "";
     top: 0;
     right: 0;
     background-image: url(../img/topRightBG.png);
@@ -37,20 +36,23 @@ body {
     z-index: -1;
   }
 }
-section, footer, header {
+section,
+footer,
+header {
   z-index: 1;
 }
 
-
-*{
+* {
   box-sizing: border-box;
-  
 }
 .container-fluid {
   width: 100%;
   padding: 0;
 }
-div, span, time, a {
+div,
+span,
+time,
+a {
   font-size: 1.375rem;
 }
 h1 {
