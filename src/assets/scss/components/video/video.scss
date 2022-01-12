@@ -15,6 +15,11 @@
       background-color: $main-bgc;
       width: 50%;
       margin: 0 auto;
+      &:hover {
+        background-color: white;
+        @include anim();
+        
+      }
     }
     .video-container {
       width: 100%;
