@@ -19,7 +19,6 @@
     }
     .timetable__item {
       position: relative;
-      // content: '';
       font-size: 25px;
       &::before {
         position: absolute;
@@ -41,6 +40,7 @@
         left: 0;
         transform: translateX(-50%);
         border-radius: 45% 55% 39% 61% / 35% 47% 53% 65%;
+        border: 1px solid darken($main-bgc, 10%);
       }
       &:nth-child(2n) {
         &::after {

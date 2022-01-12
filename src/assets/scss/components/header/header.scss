@@ -5,6 +5,14 @@
     ul {
       display: flex;
       justify-content: space-between;
+      @include media($lg) {
+        justify-content: space-evenly;
+      }
+      @include media-mm(0, $xs) {
+        flex-direction:column;
+        text-align: center;
+        gap: 1rem
+      };
       li {
         a {
           font-size: 20px;
@@ -16,17 +24,22 @@
     }
   }
   h1 {
-      margin: 25px 0;
-      text-align: center;
-      div {
-        @extend h1;
-      }
+    margin: 25px 0;
+    text-align: center;
+    div {
+      @extend h1;
+    }
   }
   .dots {
-    background: radial-gradient(ellipse at center, rgba(159, 212, 255, 0.308) 0%, rgba(198, 206, 250, 0.466) 30%, transparent 30%);
+    background: radial-gradient(
+      ellipse at center,
+      rgba(159, 212, 255, 0.308) 0%,
+      rgba(198, 206, 250, 0.466) 30%,
+      transparent 30%
+    );
     background-size: 20px 20px;
     background-repeat: repeat-x;
     background-position: 5px center;
     height: 50px;
-}
+  }
 }
