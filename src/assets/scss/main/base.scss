@@ -61,3 +61,11 @@ h1 {
 h2 {
   font-size: 2rem;
 }
+
+a {
+  color: $main-bgc;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}

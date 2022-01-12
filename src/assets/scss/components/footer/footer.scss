@@ -2,6 +2,11 @@
   padding: 100px 0;
   text-align: center;
   li {
+    h2 {
+      a {
+        @extend h2;
+      }
+    }
   }
   form {
     display: flex;
@@ -14,9 +19,22 @@
     text-align: center;
     background-color: white;
     border-color: $main-bgc;
+    &:first-child {
+      border-radius: 10px 10px 0 0;
+      border-bottom: 0;
+}
+    &:last-child {
+      border-radius: 0 0 10px 10px;
+}
     @include media($md) {
       width: 60%;
       margin: 0 auto;
     }
   }
+  details {
+    padding: 15px;
+    border: 2px solid $main-bgc;
+    background-color: #fff;
+    border-radius: 10px;
+}
 }
