@@ -1,4 +1,21 @@
-console.log(1);
+let goToTop = document.getElementById("go-to-top");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    goToTop.style.display = "block";
+  } else {
+    goToTop.style.display = "none";
+  }
+}
+
+
+function topFunction() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
+}
 const wMonths = document.querySelector("span[data-wMonths]");
 const wDays = document.querySelector("span[data-wDays]");
 const wHours = document.querySelector("span[data-wHours]");

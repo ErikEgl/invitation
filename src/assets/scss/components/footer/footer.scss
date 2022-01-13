@@ -1,6 +1,7 @@
 .footer {
   padding: 100px 0;
   text-align: center;
+  position: relative;
   li {
     h2 {
       a {
@@ -22,10 +23,10 @@
     &:first-child {
       border-radius: 10px 10px 0 0;
       border-bottom: 0;
-}
+    }
     &:last-child {
       border-radius: 0 0 10px 10px;
-}
+    }
     @include media($md) {
       width: 60%;
       margin: 0 auto;
@@ -36,5 +37,9 @@
     border: 2px solid $main-bgc;
     background-color: #fff;
     border-radius: 10px;
-}
+    @include media($md) {
+      width: 60%;
+      margin: 0 auto;
+    }
+  }
 }
