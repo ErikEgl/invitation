@@ -71,7 +71,7 @@ function clock() {
   let wYear = 2022;
   let wMonth = 1;
   let wDay = 26;
-  let wHour = 12;
+  let wHour = 13;
   let weddingDay = new Date(wYear, wMonth, wDay, wHour);
 
   function msCount(msEvent, $mo, $d, $h, $mi, $s) {
@@ -132,5 +132,26 @@ videoStartBtn1.addEventListener("click", () => {
   setTimeout(() => {
     video.play();
   }, 300);
+});
+
+$(document).ready(function() {
+
+	//E-mail Ajax Send
+	$("form").submit(function() { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			alert("Письмо отправлено!");
+			setTimeout(function() {
+				// Done Functions
+				th.trigger("reset");
+			}, 1000);
+		});
+		return false;
+	});
+
 });
 
