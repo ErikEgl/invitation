@@ -1,10 +1,13 @@
 .timetable {
-  padding: 100px 0;
+  padding: 70px 0 100px;
+  @include media-mm(376px, $md) {
+    padding: 0px 0 100px;
+  };
   @include media-mm(0, 375px) {
-    padding: 150px 0;
+    padding: 0px 0 150px;
   }
   h1 {
-    padding: 50px 0 150px;
+    padding: 50px 0 175px;
     text-align: center;
     @include media-mm(0, 375px) {
       padding: 50px 0 220px;
@@ -18,6 +21,9 @@
       min-width: 325px;
       transform: rotate(90deg);
     }
+    @include media-mm(376px, 500px) {
+      justify-content: space-evenly;
+    };
     &::after {
       position: absolute;
       content: "";
@@ -30,14 +36,20 @@
     .timetable__item {
       position: relative;
       font-size: 25px;
-     
+
       p {
         position: absolute;
         content: "";
         top: 100px;
         left: 0;
         transform: translateX(-50%);
-        white-space: nowrap;
+        // white-space: nowrap;
+        text-align: center;
+        min-width: 125px;
+        line-height: 0.8;
+        @include media-mm(0, 375px) {
+          top: 80px;
+        }
       }
       &::before {
         position: absolute;
@@ -60,13 +72,45 @@
         transform: translateX(-50%);
         border-radius: 45% 55% 39% 61% / 35% 47% 53% 65%;
         border: 1px solid darken($main-bgc, 10%);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        @include media-mm(0, 375px) {
+          top: 25px;
+        }
       }
       &:nth-child(2n) {
         p {
-          top: -125px;
+          top: -150px;
+          @include media-mm(0, 375px) {
+            top: -140px;
+          }
         }
         &::after {
           top: -90px;
+          @include media-mm(0, 375px) {
+            top: -75px;
+          }
+        }
+      }
+      &:nth-child(1) {
+        &::after {
+          background-image: url(../svg/screen-heart.svg);
+        }
+      }
+      &:nth-child(2) {
+        &::after {
+          background-image: url(../svg/discourse.svg);
+        }
+      }
+      &:nth-child(3) {
+        &::after {
+          background-image: url(../svg/man-taking-hand.svg);
+        }
+      }
+      &:nth-child(4) {
+        &::after {
+          background-image: url(../svg/couple-on-screen.svg);
         }
       }
     }

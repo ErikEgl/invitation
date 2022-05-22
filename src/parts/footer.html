@@ -1,35 +1,46 @@
 <footer class="footer" id="footer">
     <div class="container">
         <h1 id="zoom">Ссылка в Zoom</h1>
-        <ul>
-            <li><h2><a href="#">123456789</a></h2></li>
-            <li><h2>4563</h2></li>
+        <ul class="zoom-wrap">
+            <li><h2>ИД Zoom: <a id="zoom-id" class="zoom-id" target="_blank" href="https://us02web.zoom.us/j/8140873503?pwd=V1BvQlVsdzNPNkpGRWlXaHJxc3lndz09">8140873503</a></h2></li>
+            <li><h2>Пароль: <a>11</a></h2></li>
         </ul>
-        <h1 id="support">Техподдержка</h1>
+        <h1 class="mt-5" id="support">Техподдержка</h1>
         <ul>
-            <li>Как зайти?</li>
-            <li>Другие вопросы</li>
+            <li class="my-2">Как зайти?</li>
+            <li class="my-2">Куда отправить видеопоздравление?</li>
+            <li class="my-2">Другие вопросы?</li>
         </ul>
-        <form action="mailto:mr.erik.egliens@gmail.com" method="post" enctype="text/plain">
-            <input type="text" size="50" required name="question" placeholder="Напиши вопрос">
-            <input type="submit" value="Отправь вопрос">
-        </form>
 
-        <details>
-            <summary>Нажми, чтоб посмотреть контакты распорядителей</summary>
-            <ul>
-                <li>
+		
+
+        <form>
+        <!-- Hidden Required Fields -->
+            <input type="hidden" name="project_name" value="Erik-Avgustina">
+            <input type="hidden" name="admin_email" value="efedotov@pm.me">
+            <input type="hidden" name="form_subject" value="Вопрос с сайта egliens.ru">
+        <!-- END Hidden Required Fields -->
+            <input id="check" name="check" type="hidden" value="">
+            <div class="form-inner-wrap">
+                <input type="text" name="question" placeholder="Напиши вопрос" required>
+                <input type="text" name="E-mail" placeholder="Твой e-mail, чтоб нам ответить" required>
+                <input id="submit" class="submit" type="submit" value="Отправь вопрос" onclick="document.getElementById('check').value = 'nospam';">
+            </div>
+        </form>
+        <p>Или задай вопрос по телефону</p>
+            <ul class="details">
+                <li>Контакты распорядителей</li>
+                <li>Можно писать в мессенджеры</li>
+                <li class="support-staff">
                     Дмитрий<a href="tel:+37253605178"> +372 5360 5178</a>
                 </li>
-                <li>
+                <li class="support-staff">
                     Егор<a href="tel:+37256127777"> +372 5612 7777</a>
                 </li>
-                <li>
-                    Эрик<a href="tel:+3725580887"> +372 5580 887</a>
+                <li class="support-staff">
+                    Эрик Эглиенс<a href="tel:+3725580887"> +372 5580 887</a>
                 </li>
             </ul>
-            
-          </details>
     </div>
 </footer>
 

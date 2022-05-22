@@ -1,9 +1,19 @@
 <section class="video">
   <div class="container">
-    <a class='video-container-anchor' href="#video-container">Посмотреть приглашение</a>
+    <a class="video-container-anchor" href="#video-container"
+      >Посмотреть приглашение</a
+    >
 
-    <div id="video-container" class="video-container">
-        Видео
-    </div>
+    <video
+      preload="auto"
+      controls
+      controlsList="nodownload"
+      poster="assets/img/thumbnail.jpg"
+      id="video-container"
+      class="video-container"
+    >
+      {# <source src="assets/img/video.webm" type="video/webm" />
+      <source src="assets/img/video.mp4" type="video/mp4" /> #}
+    </video>
   </div>
 </section>

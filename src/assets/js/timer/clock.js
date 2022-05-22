@@ -4,7 +4,7 @@ function clock() {
   let wYear = 2022;
   let wMonth = 1;
   let wDay = 26;
-  let wHour = 12;
+  let wHour = 13;
   let weddingDay = new Date(wYear, wMonth, wDay, wHour);
 
   function msCount(msEvent, $mo, $d, $h, $mi, $s) {

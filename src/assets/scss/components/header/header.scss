@@ -2,18 +2,31 @@
   nav {
     background-color: $main-bgc;
     padding: 80px 0 30px;
+    font-family: sans-serif;
+
     ul {
       display: flex;
       justify-content: space-between;
+
       @include media($lg) {
         justify-content: space-evenly;
       }
-      @include media-mm(0, $xs) {
+      @include media-mm(0, $md) {
         flex-direction: column;
         text-align: center;
         gap: 1rem;
       }
       li {
+        // position: relative;
+        // &:not(:last-child):after {
+        //   content: ' | ';
+        //   position: absolute;
+        //   right: -10px;
+        //   bottom: 50%;
+        //   transform: translateY(50%);
+        //   font-size: 50px;
+        //   color: $main-bgc;
+        // }
         a {
           font-size: 20px;
           color: black;
