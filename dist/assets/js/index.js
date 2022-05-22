@@ -75,7 +75,7 @@ function clock() {
   let weddingDay = new Date(wYear, wMonth, wDay, wHour);
 
   function msCount(msEvent, $mo, $d, $h, $mi, $s) {
-    let millisecondsTillComing = msEvent - currentTime;
+    let millisecondsTillComing = currentTime - msEvent;
     let months = parseInt(
       (millisecondsTillComing / (1000 * 60 * 60 * 24 * 30)) % 12
     );
